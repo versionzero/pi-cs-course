@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+
+<div id="front-wrapper">
+  <div id="hero">
+    <div id="hero-inner" class="container">
+      {% include custom/intro.html %}
+    </div>
+  </div>
+  <section id="sub-hero">
+    <a href="https://github.com/versionzero/pi-cs-course" target="_blank">
+      <img style="position: absolute; top: 0; right: 0; border: 0;"
+           src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"
+           alt="Fork me on GitHub">
+    </a>
+    <div class="container">
+      {% include custom/widgets.html %}
+    </div>
+  </section>
+  <div class="container">
+    <div class="row" id="post-container">
+    {% assign index = true %}
+    {% for post in paginator.posts %}
+    {% assign content = post.content %}
+      <article class="span4">
+        {% include article.html %}
+      </article>
+    {% endfor %}
+    </div>
+      <div class="row">
+        <ul class="pager">
+          {% if paginator.next_page %}
+            <li class="previous">
+              <a href="{{paginator.next_page}}">&larr; Older</a>
+            </li>
+          {% endif %}
+          {% if paginator.previous_page %}
+            <li class="next">
+              <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+  </div>
+</div>
+
