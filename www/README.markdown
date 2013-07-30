@@ -1,38 +1,52 @@
-## What is Octopress?
+# Jekyll
 
-Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
+[![Build Status](https://secure.travis-ci.org/mojombo/jekyll.png)](https://travis-ci.org/mojombo/jekyll)
+[![Code Climate](https://codeclimate.com/github/mojombo/jekyll.png)](https://codeclimate.com/github/mojombo/jekyll)
 
-1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
-2. **Code blogging is easy and beautiful.** Embed code (with [Solarized](http://ethanschoonover.com/solarized) styling) in your posts from gists, jsFiddle or from your filesystem.
-3. **Third party integration is simple** with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
-4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
-5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
+By Tom Preston-Werner, Nick Quaranto, and many awesome contributors!
 
+Jekyll is a simple, blog aware, static site generator. It takes a template directory (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind [GitHub Pages](http://pages.github.com), which you can use to host your project's page or blog right here from GitHub.
 
-## Documentation
+## Getting Started
 
-Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
+* [Install](http://jekyllrb.com/docs/installation/) the gem
+* Read up about its [Usage](http://jekyllrb.com/docs/usage/) and [Configuration](http://jekyllrb.com/docs/configuration/)
+* Take a gander at some existing [Sites](http://wiki.github.com/mojombo/jekyll/sites)
+* Fork and [Contribute](https://github.com/mojombo/jekyll/blob/master/CONTRIBUTING.md) your own modifications
+* Have questions? Post them on the [Mailing List](http://groups.google.com/group/jekyll-rb)
 
+## Diving In
 
-## Contributing
+* [Migrate](http://jekyllrb.com/docs/migrations/) from your previous system
+* Learn how the [YAML Front Matter](http://jekyllrb.com/docs/frontmatter/) works
+* Put information on your site with [Variables](http://jekyllrb.com/docs/variables/)
+* Customize the [Permalinks](http://jekyllrb.com/docs/permalinks/) your posts are generated with
+* Use the built-in [Liquid Extensions](http://jekyllrb.com/docs/templates/) to make your life easier
+* Use custom [Plugins](http://jekyllrb.com/docs/plugins/) to generate content specific to your site
 
-[![Build Status](https://travis-ci.org/imathis/octopress.png?branch=master)](https://travis-ci.org/imathis/octopress)
+## Runtime Dependencies
 
-We love to see people contributing to Octopress, whether it's a bug report, feature suggestion or a pull request. At the moment, we try to keep the core slick and lean, focusing on basic blogging needs, so some of your suggestions might not find their way into Octopress. For those ideas, we started a [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plugins), where you can link your own Octopress plug-in repositories. For the future, we're thinking about ways to easier add them them into our main releases.
+* Commander: Command-line interface constructor (Ruby)
+* Colorator: Colorizes command line output (Ruby)
+* Classifier: Generating related posts (Ruby)
+* Directory Watcher: Auto-regeneration of sites (Ruby)
+* Kramdown: Markdown-superset converter (Ruby)
+* Liquid: Templating system (Ruby)
+* Maruku: Default markdown engine (Ruby)
+* Pygments.rb: Syntax highlighting (Ruby/Python)
+* RedCarpet: Markdown engine (Ruby)
+* Safe YAML: YAML Parser built for security (Ruby)
 
+## Developer Dependencies
+
+* Launchy: Cross-platform file launcher (Ruby)
+* RDiscount: Discount Markdown Processor (Ruby)
+* RedCloth: Textile support (Ruby)
+* RedGreen: Nicer test output (Ruby)
+* RR: Mocking (Ruby)
+* Shoulda: Test framework (Ruby)
+* SimpleCov: Coverage framework (Ruby)
 
 ## License
-(The MIT License)
 
-Copyright © 2009-2013 Brandon Mathis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-#### If you want to be awesome.
-- Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
+See [LICENSE](https://github.com/mojombo/jekyll/blob/master/LICENSE).
