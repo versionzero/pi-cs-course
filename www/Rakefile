@@ -223,7 +223,7 @@ task :deploy do
   Rake::Task["#{deploy_default}"].execute
 end
 
-desc "Generate website and deploy"
+desc "Generate and deploy website"
 task :reup => [:integrate, :generate, :deploy] do
 end
 
