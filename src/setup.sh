@@ -17,7 +17,7 @@ apt-get -y dist-upgrade
 apt-get -y autoremove
 apt-get -y autoclean
 
-apt-get -y install libreoffice vim vim-nox screen unzip zip python-software-properties aptitude curl ntp ntpdate git-core wget ca-certificates binutils raspi-config emacs23-nox 
+apt-get -y install libreoffice vim vim-nox screen unzip zip python-software-properties aptitude curl ntp ntpdate git-core wget ca-certificates binutils raspi-config emacs23-nox raspberrypi-bootloader
 
 # Remove the extra tty / getty’s | Save: +3.5 MB RAM
 sed -i '/[2-6]:23:respawn:\/sbin\/getty 38400 tty[2-6]/s%^%#%g' /etc/inittab
@@ -40,9 +40,9 @@ sed -i 's/sortstrategy = 3/sortstrategy = 0/g' /etc/preload.conf
 sed -i 's/defaults,noatime/defaults,noatime,nodiratime/g' /etc/fstab
 
 # Disable IPv6
-echo "net.ipv6.conf.all.disable_ipv6=1" > /etc/sysctl.d/disableipv6.conf
-echo 'blacklist ipv6' >> /etc/modprobe.d/blacklist
-sed -i '/::/s%^%#%g' /etc/hosts
+#echo "net.ipv6.conf.all.disable_ipv6=1" > /etc/sysctl.d/disableipv6.conf
+#echo 'blacklist ipv6' >> /etc/modprobe.d/blacklist
+#sed -i '/::/s%^%#%g' /etc/hosts
 
 # Replace Deadline Scheduler with NOOP Scheduler
 sed -i 's/deadline/noop/g' /boot/cmdline.txt
@@ -57,6 +57,10 @@ echo -e "*.*;mail.none;cron.none\t -/var/log/messages\ncron.*\t -/var/log/cron\n
 mkdir -p /etc/logrotate.d
 echo -e "/var/log/cron\n/var/log/mail\n/var/log/messages {\n\trotate 4\n\tweekly\n\tmissingok\n\tnotifempty\n\tcompress\n\tsharedscripts\n\tpostrotate\n\t/etc/init.d/inetutils-syslogd reload >/dev/null\n\tendscript\n}" > /etc/logrotate.d/inetutils-syslogd
 service inetutils-syslogd start
+
+# Configure Wireless LAN hot-plug
+#apt-get install -y wpasupplicant
+#/etc/network/interfaces
 
 # Reboot
 shutdown -r now
