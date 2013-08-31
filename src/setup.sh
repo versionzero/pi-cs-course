@@ -2,10 +2,11 @@
 
 #
 # Based on:
+# https://github.com/codyrioux/fntpi
 # https://extremeshok.com/2012/07/22/raspberry-pi-raspbian-tuning-optimising-optimizing-for-reduced-memory-usage/
 #
 # This can be executed by calling:
-# \curl -L https://raw.github.com/versionzero/fntpi/master/setup.sh | bash -x
+# \curl -L https://raw.github.com/versionzero/fntpi/develop/setup.sh | bash -x
 #
 
 sudo su
