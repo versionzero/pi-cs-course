@@ -63,5 +63,5 @@ service inetutils-syslogd start
 #/etc/network/interfaces
 
 # Reboot
-shutdown -r now
+shutdown -h now
 
